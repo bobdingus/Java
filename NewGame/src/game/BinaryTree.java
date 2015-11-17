@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class BinaryTree<T extends Comparable<T>>{
  
       public Node startingNode; 
-      
+      //comment
       public final boolean LEFT = true;
       public final boolean RIGHT = false;
     
