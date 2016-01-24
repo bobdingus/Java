@@ -83,8 +83,6 @@ public class World implements MasterObject {
 		tiles  		= new Tile[TILES_ACROSS][TILES_DOWN];
 		perlinMap = new PerlinMap(TILES_ACROSS,TILES_DOWN);
 		
-		
-		
 		initTiles();
 		randomClyde(30);	
 	}
@@ -97,7 +95,6 @@ public class World implements MasterObject {
 		while(!tempQueue.isEmpty()){
 			eventQueue.add(tempQueue.poll());
 		}
-		
 	}
 	
 	public void randomClyde(int max){
@@ -107,14 +104,12 @@ public class World implements MasterObject {
 				 int yp = (int) (Math.random()*TILES_DOWN);
 				 if(tiles[xp][yp].getCreature()== null && tiles[xp][yp].passable.get()){
 					 Clyde C = new Clyde(this,xp,yp );
-					 //C.select();
-					 
+					 //C.select();			 
 					 tiles[xp][yp].swapBuffers();
 					 break;
 				 } 
 			 }
 		}
-		 
 	}
 	
 	public void initTiles(){
